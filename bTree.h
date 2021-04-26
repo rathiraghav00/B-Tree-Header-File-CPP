@@ -18,45 +18,36 @@ struct BNode
 
 typedef char BTREE_EXCEPTION;
 
-// class for representing b trees.
+
 template <typename T>
 class BTree
 {
 public:
+
     // Constructor
     // First parameter is the minimum degree of the tree.
     // Second parameter is the tree's key-comparison function.
     // Third parameter is a function that prints keys.
-    // Constant time.
     BTree(unsigned, bool (*)(T, T), void (*)(T) = NULL);
 
     // Destructor.
-    // Linear time.
     ~BTree<T>();
 
     // Inserts a key into the tree.
-    // Logorithmic time.
     void insert(T);
 
     // Removes a key from the tree.
-    // Throws a BTREE_EXCEPTION if no item was found to remove.
-    // Logorithmic time.
     T remove(T);
 
     // Function to find a key in the tree.
     // returnValue.first is the node the item is in.
     // returnValue.second is the correct index in that node's key array
-    // Logorithmic time.
     std::pair<BNode<T> *, unsigned> search(T);
 
     // Uses search but just returns the key rather than the whole node.
-    // Useful when T is a key value pair and lessThan only looks at the key.
-    // Throws a BTREE_EXCEPTION if no item matching the parameter is found
-    // Logorithmic time.
     T searchKey(T);
 
     // Prints the tree.
-    // Linear time
     void print();
 
 private:
