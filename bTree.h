@@ -6,7 +6,7 @@
 #define SEARCH_KEY_NOT_FOUND 's'
 #define REMOVE_KEY_NOT_FOUND 'r'
 
-// struct for representing nodes of a b tree
+// Structure for representing nodes of a b tree
 template <typename T>
 struct BNode
 {
