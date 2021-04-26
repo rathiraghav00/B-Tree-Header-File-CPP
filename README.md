@@ -1,4 +1,4 @@
-# BTree-Header-File
+# B-Tree-Header-File
 
 B Tree is a specialized m-way tree that can be widely used for disk access. A B-Tree of order m can have at most m-1 keys and m children. One of the main reason of using B tree is its capability to store large number of keys in a single node and large key values by keeping the height of the tree relatively small.
 
